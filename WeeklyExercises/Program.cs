@@ -1,4 +1,4 @@
-﻿/*EXERCISE 1
+﻿/*EXERCISE 1 - BIO
 using System.ComponentModel.Design;
 
 string firstName = "Jacob", lastName = "Oliver";
@@ -12,7 +12,7 @@ Console.WriteLine($"Age: {age}");
 Console.WriteLine($"International Student? {intStudent}");
 Console.WriteLine($"I have {petCount} pet(s)");*/
 
-//EXERCISE 2
+/*EXERCISE 2 - COMPARISONS
 var lilyAge = 37;
 var lilyNameLength = ("Lily".Length);
 var jakeAge = 36;
@@ -38,4 +38,26 @@ if (jakeNameLength > lilyNameLength)
 else
 {
     Console.WriteLine("Her name is longer, {0} letters versus {1} letters.", lilyNameLength, jakeNameLength);
+}*/
+
+//EXERCISE 3 - MONTH/SEASON LOGIC
+Console.WriteLine("Select your birthday Month from the list below.");
+Console.WriteLine("(1) January\n(2) February\n(3) March\n(4) April\n(5) May\n(6) June\n(7) July\n(8) August\n(9) September\n(10) October\n(11) November\n(12) December");
+Console.Write("Enter your birth month (eg: '1' for January): ");
+var birthMonth = int.Parse(Console.ReadLine());
+
+switch (birthMonth)
+{
+    case 12 or 1 or 2:
+        Console.WriteLine("Your birthday is in Summer!");
+        break;
+    case 3 or 4 or 5:
+        Console.WriteLine("Your birthday is in Autumn!");
+        break;
+    case 6 or 7 or 8:
+        Console.WriteLine("Your birthday is in Winter!");
+        break;
+    case 9 or 10 or 11:
+        Console.WriteLine("Your birthday is in Spring!");
+        break;
 }
