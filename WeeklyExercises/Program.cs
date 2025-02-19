@@ -62,7 +62,7 @@ switch (birthMonth)
         break;
 }*/
 
-//EXERCISE 4 - TIMES TABLES
+/*EXERCISE 4 - TIMES TABLES
 Console.WriteLine("MULTIPLICATION CALCULATOR");
 int firstNumber;
 int secondNumber;
@@ -97,4 +97,17 @@ while (true)
 
 int result = firstNumber * secondNumber;
 Console.WriteLine("Request: {0} x {1}", firstNumber, secondNumber);
-Console.WriteLine("Result: {0}", result);
+Console.WriteLine("Result: {0}", result);*/
+
+
+//EXERCISE 5 - DEBUG CODE
+using System.Drawing;
+using System;
+
+void myFunction()
+{
+    int myInt = 5;
+    Console.WriteLine(myInt);
+}
+
+myFunction();
