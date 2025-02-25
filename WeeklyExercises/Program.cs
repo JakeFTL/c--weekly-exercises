@@ -100,7 +100,7 @@ Console.WriteLine("Request: {0} x {1}", firstNumber, secondNumber);
 Console.WriteLine("Result: {0}", result);*/
 
 
-//EXERCISE 5 - DEBUG CODE
+/*EXERCISE 5 - DEBUG CODE
 using System.Drawing;
 using System;
 
@@ -110,4 +110,163 @@ void myFunction()
     Console.WriteLine(myInt);
 }
 
-myFunction();
+myFunction();*/
+
+/*EXERCISE 6 - DECLARING & USING FUNCTIONS
+using System.ComponentModel.Design;
+
+void WelcomeMessage()
+{
+    Console.WriteLine("*************************");
+    Console.WriteLine("Welcome to My Application");
+    Console.WriteLine("*************************");
+}
+WelcomeMessage();*/
+
+/*//EXERCISE 7 - PARAMETERS
+void Calculator()
+{
+    int firstValue, secondValue;
+
+    Console.Write("Enter first value: ");
+    while (true)
+    {
+        try
+        {
+            firstValue = Convert.ToInt32(Console.ReadLine());
+            break;
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Invalid entry, please try again.");
+            Console.Write("Enter first value: ");
+        }
+    }
+
+    Console.Write("Enter second value: ");
+    while (true)
+    {
+        try
+        {
+            secondValue = Convert.ToInt32(Console.ReadLine());
+            break;
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Invalid entry, please try again.");
+            Console.Write("Enter second value: ");
+        }
+    }
+
+    Console.Write("Select Calculation (1: Multiplication - 2: Division): ");
+    while (true)
+    {
+        var calculation = Console.ReadLine();
+        if (calculation == "1")
+        {
+            int result = firstValue * secondValue;
+            Console.WriteLine("{0} x {1} = {2}", firstValue, secondValue, result);
+            break;
+        }
+        else if (calculation == "2")
+        {
+            int result = firstValue / secondValue;
+            Console.WriteLine("{0} / {1} = {2}", firstValue, secondValue, result);
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid selection, please try again.");
+            Console.Write("Select Calculation (1: Multiplication - 2: Division): ");
+        }
+    }
+}
+Calculator();*/
+
+/*//EXERCISE 8A - SIMPLE NAME
+using System.Globalization;
+
+void WelcomeMessage()
+{
+    string userName;
+    Console.Write("Enter your name: ");
+    userName = Console.ReadLine();
+    if (userName == null)
+    {
+        Console.WriteLine("");
+        Console.WriteLine("*************************");
+        Console.WriteLine("Welcome to My Application");
+        Console.WriteLine("*************************");
+    }
+    else
+    {
+        Console.WriteLine("");
+        Console.WriteLine("**********************************");
+        Console.WriteLine("Welcome {0}, to My Application!", userName);
+        Console.WriteLine("**********************************");
+    }
+}
+WelcomeMessage();*/
+
+//EXERCISE 8B - COMPLEX INFO
+void UserInformation()
+{
+    int myAge = 36;
+    string myName = "Jacob";
+
+    int userAge;
+    string userName ="";
+
+    Console.Write("Enter your age: ");
+    while (true)
+    {
+        try
+        {
+            userAge = Convert.ToInt32(Console.ReadLine());
+            break;
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Invalid entry, please enter again.");
+            Console.Write("Enter your age: ");
+        }
+    }
+    while (userName.Length < 1)
+    {
+        Console.Write("Enter your name: ");
+        userName = Console.ReadLine();
+        if(userName.Length < 1)
+        {
+            Console.WriteLine("No name entered, try again!");
+        }
+    }
+    if (myAge > userAge)
+    {
+        var ageDifference = myAge - userAge;
+        Console.WriteLine("I am older than you. The age difference is {0} year(s)", ageDifference);
+    }
+    else if (myAge == userAge)
+    {
+        Console.WriteLine("We are the same age.");
+    }
+    else
+    {
+        var ageDifference = userAge - myAge;
+        Console.WriteLine("You are older than me. The age difference is {0} year(s)", ageDifference);
+    }
+    if (myName.Length > userName.Length)
+    {
+        Console.WriteLine("My name is longer than yours.");
+    }
+    else if (myName.Length == userName.Length)
+    {
+        Console.WriteLine("Our names are the same length.");
+    }
+    else
+    {
+        Console.WriteLine("Your name is longer than mine.");
+    }
+
+}
+
+UserInformation();
